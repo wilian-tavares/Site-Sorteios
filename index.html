@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="javascript.js"></script>
+    <title>sorteio Loterias e Apostas</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="description" style="text-align:center">
+            <h1>Sorteios Loterias e Apostas</h1>
+        </div>
+
+        <div class="sorteios">
+            <div class="imagem imagem-mega">
+            </div>
+
+            <input type="text" id="resultado-mega" class="resultado resultado-mega" disabled="disabled">
+            <button onclick="sorteioMega('valor')" class="botao-sortear" type="button">Sortear</button>
+        </div>
+
+
+
+        <div class="sorteios">
+            <div class="imagem imagem-lotafacil">
+            </div>
+
+            <input type="text" id="resultado-lotofacil" class="resultado resultado-lotofacil" disabled="disabled">
+            <button onclick="sorteioLotofacil('valor')" class="botao-sortear" type="button">Sortear</button>
+        </div>
+
+        <div class="sorteios">
+            <div class="imagem imagem-quina">
+            </div>
+
+            <input type="text" id="resultado-quina" class="resultado resultado-quina" disabled="disabled">
+            <button onclick="sorteioQuina('valor')" class="botao-sortear" type=button>Sortear</button>
+        </div>
+
+        <!-- ================================================================= 
+
+                                    Jogo do bicho-->
+
+        <h2 style="text-align:center; font-size:3rem; color: rgb(236, 255, 127);">
+            Apostas Jogo Do Bicho
+        </h2>
+
+        <div class="sorteios">
+            <div class="description">
+                <h1>Milhar</h1>
+            </div>
+
+            <input type="text" id="resultado-milhar" class="resultado resultado-milhar" disabled="disabled">
+            <button onclick="sorteioMilhar('valor')" class="botao-sortear" type="button">Sortear</button>
+        </div>
+
+        <div class="sorteios">
+            <div class="description" style="text-align:center">
+                <h1>Centena</h1>
+            </div>
+
+            <input type="text" id="resultado-centena" class="resultado resultado-centena" disabled="disabled">
+            <button onclick="sorteioCentena('valor')" class="botao-sortear" type="button">Sortear</button>
+        </div>
+
+        <div class="sorteios">
+            <div class="description" style="text-align:center">
+                <h1>Duque de Dezena</h1>
+            </div>
+
+            <input type="text" id="resultado-ddz" class="resultado resultado-ddz" disabled="disabled">
+            <button onclick="sorteioDdz('valor')" class="botao-sortear" type="button">Sortear</button>
+        </div>
+
+
+        <div class="sorteios">
+            <div class="description" style="text-align:center">
+                <h1>Terno de Dezena</h1>
+            </div>
+
+            <input type="text" id="resultado-tdz" class="resultado resultado-tdz" disabled="disabled">
+            <button onclick="sorteioTdz('valor')" class="botao-sortear" type="button">Sortear</button>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <h3> Este Site não faz o incentivo a Apostas ilegais</h3>
+        <p>Apostas são proibidas para menores de 18 Anos</p>
+        <span>site Criado por Wilian Tavares</span>
+    </footer>
+
+
+
+</body>
+
+</html>
