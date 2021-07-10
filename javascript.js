@@ -1,11 +1,14 @@
 
 
 /* Função Para Ordenar */
+/*
 function ordenador(a, b) {
     if (a == b) return 0;
     if (a < b) return -1;
     if (a > b) return 1;
 }
+*/
+
 function compararNumeros(a, b) {
     return a - b;
 }
@@ -33,7 +36,7 @@ function sorteioMega(valor) {
 }
 
 
-function sorteioLotofacil(valor) {
+function sorteioLotofacil() {
     var numerosSorteados = [];
     var min = 1;
     var max = 25;
@@ -53,7 +56,7 @@ function sorteioLotofacil(valor) {
     numerosSorteados.sort(compararNumeros);
 
     /*  codigo CSS*/
-    document.getElementById('resultado-lotofacil').style.color = "red";
+
     document.getElementById('resultado-lotofacil').style.fontSize = "1.5rem";
     /*  codigo CSS*/
 
@@ -78,6 +81,29 @@ function sorteioQuina(valor) {
     numerosSorteados.sort(compararNumeros);
     document.getElementById('resultado-quina').value = numerosSorteados;
 }
+
+function sorteioLotomania() {
+    var numerosSorteados = [];
+    var min = 1;
+    var max = 100;
+
+    while (numerosSorteados.length < 50) {
+        dezena = (Math.floor(Math.random() * (max - min + 1)) + min);
+        dezena = dezena.toFixed();
+
+        if (numerosSorteados.includes(dezena)) {
+
+        }
+        else {
+            numerosSorteados.push(dezena);
+        }
+    }
+    numerosSorteados.sort(compararNumeros);
+
+    document.getElementById('resultado-aaa').textContent = numerosSorteados;
+}
+
+
 
 function sorteioMilhar(valor) {
     min = 0000;
