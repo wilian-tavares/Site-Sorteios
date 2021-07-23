@@ -1,24 +1,21 @@
+var qtdNumerosMega;
+var qtdNumerosLotofacil;
+var qtdNumerosQuina;
 
-
-/* Função Para Ordenar */
-/*
-function ordenador(a, b) {
-    if (a == b) return 0;
-    if (a < b) return -1;
-    if (a > b) return 1;
-}
-*/
 
 function compararNumeros(a, b) {
     return a - b;
 }
 
 
-function sorteioMega(valor) {
+function sorteioMega() {
+    qtdNumerosMega = document.getElementById('qtdNumerosMega').value;
+
+
     var numerosSorteados = [];
     var min = 1;
     var max = 60;
-    while (numerosSorteados.length < 6) {
+    while (numerosSorteados.length < qtdNumerosMega) {
 
 
         var dezena = (Math.floor(Math.random() * (max - min + 1)) + min);
@@ -29,19 +26,23 @@ function sorteioMega(valor) {
         else {
             numerosSorteados.push(dezena);
         }
+
     }
 
     numerosSorteados.sort(compararNumeros);
     document.getElementById("resultado-mega").value = numerosSorteados;
+    // console.log(qtdNumeros)
+    // console.log(numerosSorteados)
 }
 
 
 function sorteioLotofacil() {
+    qtdNumerosLotofacil = document.getElementById('qtdNumerosLotofacil').value;
     var numerosSorteados = [];
     var min = 1;
     var max = 25;
 
-    while (numerosSorteados.length < 15) {
+    while (numerosSorteados.length < qtdNumerosLotofacil) {
 
         var dezena = (Math.floor(Math.random() * (max - min + 1)) + min);
         dezena = dezena.toFixed();
@@ -52,8 +53,10 @@ function sorteioLotofacil() {
         else {
             numerosSorteados.push(dezena);
         }
+
     }
     numerosSorteados.sort(compararNumeros);
+
 
     /*  codigo CSS*/
 
@@ -63,11 +66,12 @@ function sorteioLotofacil() {
     document.getElementById('resultado-lotofacil').value = numerosSorteados;
 }
 
-function sorteioQuina(valor) {
+function sorteioQuina() {
+    qtdNumerosQuina = document.getElementById('qtdNumerosQuina').value;
     var numerosSorteados = [];
     var min = 1;
     var max = 80;
-    while (numerosSorteados.length < 5) {
+    while (numerosSorteados.length < qtdNumerosQuina) {
         dezena = (Math.floor(Math.random() * (max - min + 1)) + min);
         dezena = dezena.toFixed();
 
@@ -100,7 +104,7 @@ function sorteioLotomania() {
     }
     numerosSorteados.sort(compararNumeros);
 
-    document.getElementById('resultado-aaa').textContent = numerosSorteados;
+    document.getElementById('resultado-lotomania').textContent = numerosSorteados;
 }
 
 
@@ -164,4 +168,4 @@ function sorteioTdz(valor) {
     document.getElementById('resultado-tdz').value = numerosSorteados;
 }
 
-
+//console.log(qtdNumeros);

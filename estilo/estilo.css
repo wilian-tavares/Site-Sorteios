@@ -103,3 +103,19 @@ footer {
         font-size: 1.5rem;   
     }
 }
+
+
+.qtdNumeros {
+    height:40px;
+    width: 50px;
+    font-weight:bold;
+    background: orange;
+    
+}
+
+#resultado-lotomania {
+    white-space: nowrap;
+    width: 100%; 
+    overflow: auto
+  
+}
